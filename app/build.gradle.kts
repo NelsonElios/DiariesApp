@@ -13,14 +13,14 @@ plugins {
 
 android {
     namespace = "com.example.diariesapp"
-    compileSdk = 33
+    compileSdk = ProjectConfig.compileSdk
     packaging { resources.excludes.add("META-INF/*") }
 
 
     defaultConfig {
         applicationId = "com.example.diariesapp"
-        minSdk = 21
-        targetSdk = 33
+        minSdk = ProjectConfig.minSdk
+        targetSdk = ProjectConfig.targetSdk
         versionCode = 1
         versionName = "1.0"
 
@@ -56,7 +56,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = ProjectConfig.kotlinCompilerExtensionVersion
     }
     packaging {
         resources {
@@ -84,7 +84,8 @@ dependencies {
 
 
     //Compose Navigation
-    implementation("androidx.navigation:navigation-compose:2.6.0") // 2.5.3
+    //implementation("androidx.navigation:navigation-compose:2.6.0") // 2.5.3
+    implementation(libs.navigation.compose) // 2.5.3
 
     //Runtime Compose
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.1")
@@ -106,7 +107,7 @@ dependencies {
     //MongoDb Realm
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-native-mt") {
         version {
-            strictly("1.6.0-native-mt")
+            strictly("1.6.0-native-mt") // this version is specified because it is this one which is compatible with the realm:kotlin library
         }
     }
 
