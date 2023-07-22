@@ -7,18 +7,20 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.diariesapp.data.database.ImagesDatabase
-import com.example.diariesapp.data.database.entity.ImageToDelete
-import com.example.diariesapp.data.database.entity.ImageToUpload
-import com.example.diariesapp.data.repository.MongoDb
-import com.example.diariesapp.model.Diary
-import com.example.diariesapp.model.GalleryImage
-import com.example.diariesapp.model.GalleryState
-import com.example.diariesapp.model.Mood
-import com.example.diariesapp.utils.Constants.EDIT_SCREEN_ARG_KEY
-import com.example.diariesapp.utils.RequestState
-import com.example.diariesapp.utils.fetchImagesFromFirebase
-import com.example.diariesapp.utils.toRealmInstant
+import com.example.mongo.database.ImagesDatabase
+import com.example.mongo.database.entity.ImageToDelete
+import com.example.mongo.database.entity.ImageToUpload
+import com.example.mongo.repository.MongoDb
+import com.example.ui.GalleryImage
+import com.example.ui.GalleryState
+import com.example.util.Constants.EDIT_SCREEN_ARG_KEY
+import com.example.util.RequestState
+import com.example.util.fetchImagesFromFirebase
+import com.example.util.model.Diary
+import com.example.util.model.Mood
+import com.example.util.toRealmInstant
+
+
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase

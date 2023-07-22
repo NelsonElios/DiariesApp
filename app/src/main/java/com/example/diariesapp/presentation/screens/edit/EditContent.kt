@@ -36,11 +36,11 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.example.diariesapp.model.Diary
-import com.example.diariesapp.model.GalleryImage
-import com.example.diariesapp.model.GalleryState
-import com.example.diariesapp.model.Mood
-import com.example.diariesapp.presentation.components.GalleryUploader
+import com.example.ui.GalleryImage
+import com.example.ui.GalleryState
+import com.example.ui.components.GalleryUploader
+import com.example.util.model.Diary
+import com.example.util.model.Mood
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.PagerState
@@ -57,7 +57,7 @@ fun EditContent(
     pagerState: PagerState,
     paddingValues: PaddingValues,
     uiState: UiState,
-    galleryState: GalleryState,
+    galleryState: com.example.ui.GalleryState,
     onSaveClicked: (Diary) -> Unit,
     onImageSelect: (Uri) -> Unit,
     onImageClicked: (GalleryImage) -> Unit

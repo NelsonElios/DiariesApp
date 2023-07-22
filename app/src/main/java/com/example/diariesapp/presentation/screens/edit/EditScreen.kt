@@ -33,10 +33,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.example.diariesapp.model.Diary
-import com.example.diariesapp.model.GalleryImage
-import com.example.diariesapp.model.GalleryState
-import com.example.diariesapp.model.Mood
+import com.example.ui.GalleryImage
+import com.example.ui.GalleryState
+import com.example.util.model.Diary
+import com.example.util.model.Mood
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.PagerState
 import java.time.ZonedDateTime

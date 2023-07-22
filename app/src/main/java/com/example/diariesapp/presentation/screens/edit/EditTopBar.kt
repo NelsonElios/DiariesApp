@@ -25,9 +25,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import com.example.diariesapp.model.Diary
-import com.example.diariesapp.presentation.components.DialogBox
-import com.example.diariesapp.utils.toInstant
+import com.example.ui.components.DialogBox
+import com.example.util.model.Diary
+import com.example.util.toInstant
 import com.maxkeppeker.sheets.core.models.base.rememberSheetState
 import com.maxkeppeler.sheets.calendar.CalendarDialog
 import com.maxkeppeler.sheets.calendar.models.CalendarConfig

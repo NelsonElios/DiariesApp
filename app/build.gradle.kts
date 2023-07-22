@@ -5,7 +5,7 @@ plugins {
     id("dagger.hilt.android.plugin")
     id("com.google.dagger.hilt.android")
     id("com.google.gms.google-services") // need for Firebase
-   // id("kotlin-kapt")
+    // id("kotlin-kapt")
     kotlin("kapt")
 
 }
@@ -83,63 +83,62 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
 
-    //Compose Navigation
+    // -- Compose Navigation
     //implementation("androidx.navigation:navigation-compose:2.6.0") // 2.5.3
     implementation(libs.navigation.compose) // 2.5.3
 
-    //Runtime Compose
+    // --Runtime Compose
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.1")
 
-    //Firebase
+    // --Firebase
     implementation("com.google.firebase:firebase-auth-ktx:22.0.0")
     implementation("com.google.firebase:firebase-storage-ktx:20.2.0")
 
-    //Room
+    // --Room
     implementation("androidx.room:room-runtime:2.5.1")
     annotationProcessor("androidx.room:room-compiler:2.5.1")
     implementation("androidx.room:room-ktx:2.5.1")
     kapt("androidx.room:room-compiler:2.5.1")
 
 
-    //Splash API
+    // --Splash API
     implementation("androidx.core:core-splashscreen:1.0.1")
 
-    //MongoDb Realm
+    // -- MongoDb Realm
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-native-mt") {
         version {
             strictly("1.6.0-native-mt") // this version is specified because it is this one which is compatible with the realm:kotlin library
         }
     }
-
     //implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
     implementation("io.realm.kotlin:library-sync:1.7.0")
 
-    //Dagger Hilt
+    // --Dagger Hilt
     implementation("com.google.dagger:hilt-android:2.44")
     //implementation("com.google.dagger:hilt-compiler:2.44")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
 
-    // Google Auth
+    // --Google Auth
     implementation("com.google.android.gms:play-services-auth:20.5.0")
 
-    //Coil
+    // --Coil
     implementation("io.coil-kt:coil-compose:2.2.2")
 
-    // Pager - Accompanist
+    // --Pager - Accompanist
     implementation("com.google.accompanist:accompanist-pager:0.27.0")
 
-    //Date-Time Picker
+    // --Date-Time Picker
     // implementation("io.github.vanpra.compose-material-dialogs:datetime:0.9.0") // not supported on material 3
     implementation("com.maxkeppeler.sheets-compose-dialogs:core:1.0.2")
 
-    //Calendar
+    // --Calendar
     implementation("com.maxkeppeler.sheets-compose-dialogs:calendar:1.0.2")
 
-    //Clock
+    // --Clock
     implementation("com.maxkeppeler.sheets-compose-dialogs:clock:1.0.2")
 
-    // One-Tap Compose
+    // --One-Tap Compose
     implementation("com.github.stevdza-san:OneTapCompose:1.0.0")
 
     // CALENDAR
@@ -148,11 +147,18 @@ dependencies {
     // CLOCK
     // implementation "com.maxkeppeler.sheets-compose-dialogs:clock:1.0.2"
 
-    //Message bar Compose
+    // -- Message bar Compose
     implementation("com.github.stevdza-san:MessageBarCompose:1.0.5")
 
-    //Desugar SDK
+    // --Desugar SDK
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.2.0") // useful to use feature higher than the specified SDK number
+
+    // --We add the differents modules of our application
+    implementation(project(":core:ui"))
+    implementation(project(":core:util"))
+    implementation(project(mapOf("path" to ":data:mongo")))
+
+    implementation(project(":feature:auth"))
 
 }
 

@@ -8,13 +8,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.diariesapp.connectivity.ConnectivityObserver
-import com.example.diariesapp.connectivity.NetworkConnectivityObserver
-import com.example.diariesapp.data.database.ImagesDatabase
-import com.example.diariesapp.data.database.entity.ImageToDelete
-import com.example.diariesapp.data.repository.Diaries
-import com.example.diariesapp.data.repository.MongoDb
-import com.example.diariesapp.utils.RequestState
+import com.example.mongo.database.ImagesDatabase
+import com.example.mongo.database.entity.ImageToDelete
+import com.example.mongo.repository.Diaries
+import com.example.mongo.repository.MongoDb
+import com.example.util.RequestState
+import com.example.util.connectivity.ConnectivityObserver
+import com.example.util.connectivity.NetworkConnectivityObserver
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.FirebaseStorage
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -28,7 +28,6 @@ import java.time.ZonedDateTime
 import javax.inject.Inject
 
 
-@RequiresApi(Build.VERSION_CODES.N)
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     private val connectivity: NetworkConnectivityObserver,

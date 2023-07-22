@@ -3,8 +3,8 @@ package com.example.diariesapp.di
 import android.app.Application
 import android.content.Context
 import androidx.room.Room
-import com.example.diariesapp.data.database.ImagesDatabase
-import com.example.diariesapp.utils.Constants
+import com.example.mongo.database.ImagesDatabase
+import com.example.util.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

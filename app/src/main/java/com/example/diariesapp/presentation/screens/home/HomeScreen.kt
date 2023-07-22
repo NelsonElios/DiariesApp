@@ -40,8 +40,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.example.diariesapp.R
-import com.example.diariesapp.data.repository.Diaries
-import com.example.diariesapp.utils.RequestState
+import com.example.mongo.repository.Diaries
+import com.example.util.RequestState
 import java.time.ZonedDateTime
 
 
