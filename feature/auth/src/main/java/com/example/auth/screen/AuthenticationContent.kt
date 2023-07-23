@@ -21,7 +21,7 @@ import com.example.ui.components.GoogleButton
 
 
 @Composable
-fun AuthenticationContent(
+internal fun AuthenticationContent(
     loadingState: Boolean,
     onButtonClicked: () -> Unit
 ) {

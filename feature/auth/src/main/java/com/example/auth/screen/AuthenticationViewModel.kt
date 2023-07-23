@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlin.time.Duration.Companion.milliseconds
 
-class AuthenticationViewModel : ViewModel() {
+internal class AuthenticationViewModel : ViewModel() { // module only usable inside the module it belongs to. We can do this for all files only needed in their module
 
     var loadingState = mutableStateOf(false)
         private set

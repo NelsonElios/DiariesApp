@@ -30,7 +30,7 @@ object DatabaseModule {
         ).build()
     }
 
-    // NOT REALLY By The moment i can get them we the database provider
+    // Not sure useful By The moment i can get them we the database provider. Maybe useful when i need the get thoses methods in differents modules
     @Provides
     @Singleton
     fun provideFirstDao(database: ImagesDatabase) = database.imageToUploadDao

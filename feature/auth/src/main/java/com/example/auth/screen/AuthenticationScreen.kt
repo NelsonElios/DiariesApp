@@ -22,7 +22,7 @@ import com.stevdzasan.onetap.OneTapSignInWithGoogle
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AuthenticationScreen(
+internal fun AuthenticationScreen(
     authenticated: Boolean,
     loadingState: Boolean,
     oneTapState: OneTapSignInState, // from Custom lib : stevdza-san:OneTapCompose

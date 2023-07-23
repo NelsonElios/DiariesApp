@@ -59,6 +59,10 @@ dependencies {
     implementation(libs.activity.compose)
     implementation(libs.compose.tooling.preview)
     implementation(libs.navigation.compose)
+    implementation(libs.lifecycle.runtime)
+
+    implementation(platform("androidx.compose:compose-bom:2023.03.00"))
+    implementation(libs.compose.ui)
 
 
     // -- For realm mongoDb
@@ -70,10 +74,6 @@ dependencies {
     implementation(libs.hilt.navigation.compose)
     kapt(libs.hilt.android.compiler)
 
-    // --internal dependencies
-    implementation(project(":core:util"))
-    implementation(project(":core:ui"))
-    implementation(project(mapOf("path" to ":data:mongo")))
 
     // --Date-Time Picker
     implementation(libs.date.time.picker)
@@ -84,4 +84,9 @@ dependencies {
     //firebase
     implementation(libs.firebase.auth)
     implementation(libs.firebase.storage)
+
+    // --internal dependencies
+    implementation(project(":core:util"))
+    implementation(project(":core:ui"))
+    implementation(project(mapOf("path" to ":data:mongo")))
 }

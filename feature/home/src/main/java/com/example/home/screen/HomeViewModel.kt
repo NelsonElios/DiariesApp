@@ -47,7 +47,6 @@ class HomeViewModel @Inject constructor(
     init {
         getDiaries()
         observeNetworkConnectivity()
-
     }
 
     fun getDiaries(zonedDateTime: ZonedDateTime? = null) {
