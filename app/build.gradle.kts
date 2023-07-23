@@ -159,6 +159,8 @@ dependencies {
     implementation(project(mapOf("path" to ":data:mongo")))
 
     implementation(project(":feature:auth"))
+    implementation(project(":feature:home"))
+    implementation(project(":feature:edit"))
 
 }
 

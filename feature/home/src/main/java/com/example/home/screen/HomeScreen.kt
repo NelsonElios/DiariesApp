@@ -1,4 +1,4 @@
-package com.example.diariesapp.presentation.screens.home
+package com.example.home.screen
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
@@ -39,7 +39,6 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.example.diariesapp.R
 import com.example.mongo.repository.Diaries
 import com.example.util.RequestState
 import java.time.ZonedDateTime
@@ -151,7 +150,7 @@ fun NavigationDrawer(
                 ) {
                     Image(
                         modifier = Modifier.size(250.dp),
-                        painter = painterResource(id = R.drawable.logo),
+                        painter = painterResource(id = com.example.ui.R.drawable.logo),
                         contentDescription = "Logo"
                     )
 
@@ -163,7 +162,7 @@ fun NavigationDrawer(
                                 .padding(horizontal = 12.dp)
                         ) {
                             Icon(
-                                painter = painterResource(id = R.drawable.google_logo),
+                                painter = painterResource(id = com.example.ui.R.drawable.google_logo),
                                 contentDescription = "Google Logo"
                             )
                             Spacer(modifier = Modifier.width(12.dp))

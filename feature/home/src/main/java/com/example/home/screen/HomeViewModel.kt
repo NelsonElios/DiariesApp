@@ -1,4 +1,4 @@
-package com.example.diariesapp.presentation.screens.home
+package com.example.home.screen
 
 import android.os.Build
 import androidx.annotation.RequiresApi
@@ -9,6 +9,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.mongo.database.ImagesDatabase
+import com.example.mongo.database.dao.ImageToDeleteDao
 import com.example.mongo.database.entity.ImageToDelete
 import com.example.mongo.repository.Diaries
 import com.example.mongo.repository.MongoDb
@@ -31,7 +32,7 @@ import javax.inject.Inject
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     private val connectivity: NetworkConnectivityObserver,
-    private val imagesDatabase: ImagesDatabase
+    private val imageToDeleteDao: ImageToDeleteDao
 ) : ViewModel() {
     private var network by mutableStateOf(ConnectivityObserver.Status.UNAVAILABLE)
 
@@ -106,11 +107,12 @@ class HomeViewModel @Inject constructor(
                         storage.child(imagePath).delete()
                             .addOnFailureListener {
                                 viewModelScope.launch(Dispatchers.IO) {
-                                    imagesDatabase.imageToDeleteDao.addImageToDelete(
+                                    imageToDeleteDao.addImageToDelete(
                                         ImageToDelete(
                                             remoteImagePath = imagePath
                                         )
                                     )
+
                                 }
                             }
                     }

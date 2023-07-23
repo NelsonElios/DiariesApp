@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.home"
+    namespace = "com.example.edit"
     compileSdk = ProjectConfig.compileSdk
 
     defaultConfig {
@@ -54,7 +54,6 @@ android {
 }
 
 dependencies {
-    // --for compose UI
     implementation(libs.material3.compose)
     implementation(libs.activity.compose)
     implementation(libs.compose.tooling.preview)
@@ -81,7 +80,16 @@ dependencies {
     // --Calendar
     implementation(libs.date.dialog)
 
-    //firebase
+    // --firebase
     implementation(libs.firebase.auth)
     implementation(libs.firebase.storage)
+
+    // --coil
+    implementation(libs.coil)
+
+    // --Pager - Accompanist
+    implementation(libs.accompanist.pager)
+
+    // --Clock
+    implementation(libs.time.dialog)
 }

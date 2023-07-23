@@ -1,7 +1,6 @@
-package com.example.diariesapp.presentation.screens.home
+package com.example.home.screen
 
 
-import android.graphics.fonts.FontStyle
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
